@@ -13,6 +13,7 @@ var MyFirstComponent = function () {
     React.createElement('div', null,
       React.createElement(MyTitle, null),
       React.createElement(MyTitle, null),
+      React.createElement(MyTitle, null),
       React.createElement(MyTitle, null)
     )
   );
