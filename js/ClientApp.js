@@ -2,15 +2,14 @@ import React from 'react';
 import { render } from 'react-dom';
 import MyTitle from './MyTitle';
 
-var ce = React.createElement;
+const ce = React.createElement;
 
-var MyFirstComponent = function () {
+const MyFirstComponent = function MyFirstComponent() {
   return (
     ce('div', null,
       ce(MyTitle, {color : 'rebeccapurple', title : 'House of Cards'}),
       ce(MyTitle, {color : 'peru', title : 'Orange is the New Black'}),
-      ce(MyTitle, {color : 'burlywood', title : 'Stranger Things'}),
-    )
+      ce(MyTitle, {color : 'burlywood', title : 'Stranger Things'}))
   );
 };
 

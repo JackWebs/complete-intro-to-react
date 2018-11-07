@@ -1,8 +1,8 @@
 import React from 'react';
 
-var ce = React.createElement;
+const ce = React.createElement;
 
-var MyTitle = function (props) {
+const MyTitle = function MyTitle(props) {
   return (
     ce('div', null,
       ce('h1', {style : {color : props.color}}, props.title)
