@@ -1,25 +1,27 @@
 /* global React ReactDOM */
 
+var ce = React.createElement;
+
 var MyTitle = function () {
   return (
-    React.createElement('div', null,
-      React.createElement('h1', null, 'Check out this component!')
+    ce('div', null,
+      ce('h1', null, 'Check out this component!')
     )
   );
 };
 
 var MyFirstComponent = function () {
   return (
-    React.createElement('div', null,
-      React.createElement(MyTitle, null),
-      React.createElement(MyTitle, null),
-      React.createElement(MyTitle, null),
-      React.createElement(MyTitle, null)
+    ce('div', null,
+      ce(MyTitle, null),
+      ce(MyTitle, null),
+      ce(MyTitle, null),
+      ce(MyTitle, null)
     )
   );
 };
 
 ReactDOM.render(
-  React.createElement(MyFirstComponent),
+  ce(MyFirstComponent),
   document.getElementById("app")
 );
