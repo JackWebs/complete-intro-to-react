@@ -1,14 +1,8 @@
-/* global React ReactDOM */
+import React from 'react';
+import { render } from 'react-dom';
+import MyTitle from './MyTitle';
 
 var ce = React.createElement;
-
-var MyTitle = function (props) {
-  return (
-    ce('div', null,
-      ce('h1', {style : {color : props.color}}, props.title)
-    )
-  );
-};
 
 var MyFirstComponent = function () {
   return (
@@ -20,7 +14,7 @@ var MyFirstComponent = function () {
   );
 };
 
-ReactDOM.render(
+render(
   ce(MyFirstComponent),
   document.getElementById("app")
 );
