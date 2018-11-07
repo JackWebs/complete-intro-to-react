@@ -2,10 +2,10 @@
 
 var ce = React.createElement;
 
-var MyTitle = function () {
+var MyTitle = function (props) {
   return (
     ce('div', null,
-      ce('h1', null, 'Check out this component!')
+      ce('h1', {style : {color : props.color}}, props.title)
     )
   );
 };
@@ -13,10 +13,9 @@ var MyTitle = function () {
 var MyFirstComponent = function () {
   return (
     ce('div', null,
-      ce(MyTitle, null),
-      ce(MyTitle, null),
-      ce(MyTitle, null),
-      ce(MyTitle, null)
+      ce(MyTitle, {color : 'rebeccapurple', title : 'House of Cards'}),
+      ce(MyTitle, {color : 'peru', title : 'Orange is the New Black'}),
+      ce(MyTitle, {color : 'burlywood', title : 'Stranger Things'}),
     )
   );
 };
