@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyTitle from './MyTitle';
 
-const MyFirstComponent = () => (
-    <div>
-      <MyTitle title="House of Cards" color="rebeccapurple"/>
-      <MyTitle title="Orange is the New Black" color="mediumaquamarine"/>
-      <MyTitle title="Stranger Things" color="peru"/>
-      <MyTitle/>
+const App = () => (
+  <div className="app">
+    <div className="landing">
+      <h1>vidflix</h1>
+      <input type="text" placeholder="Search" />
+      <a> or Browse </a>
+    </div>
   </div>
-  );
+);
 
-ReactDOM.render(<MyFirstComponent />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
