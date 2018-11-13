@@ -6,7 +6,7 @@ class Search extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        searchTerm: 'this is a debug statement'
+        searchTerm: 'this is still a debug statement'
       };
       this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
     }
@@ -17,7 +17,7 @@ class Search extends Component {
     return (
       <div className="Search">
         <header>
-          <h1>{this.state.searchTerm}</h1>
+          <h1>Search: {this.state.searchTerm}</h1>
           <input
             onChange={this.handleSearchTermChange}
             value={this.state.searchTerm}

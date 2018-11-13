@@ -1,17 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { HashRouter, Route } from 'react-router-dom';
-import Landing from './Landing';
-import Search from './Search';
+import { render } from 'react-dom';
+import App from './App';
 
+const renderApp = () => {
+  render(<App />, document.getElementById('app'));
+};
+renderApp();
 
-const App = () => (
-  <HashRouter>
-    <div className="app">
-    <Route exact path="/" component={Landing} />
-    <Route exact path="/search" component={Search} />
-    </div>
-  </HashRouter>
-);
-
-ReactDOM.render(<App />, document.getElementById('app'));
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    renderApp();
+  });
+}

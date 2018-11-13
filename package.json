@@ -1,10 +1,15 @@
 {
+  "jest": {
+  "snapshotSerializers": ["jest-serializer-enzyme"]
+  },
   "scripts": {
     "api": "node ratingsAPI.js",
     "build": "webpack",
     "watch": "webpack --watch",
     "dev": "webpack-dev-server",
-    "test": "SET NODE_ENV=test jest"
+    "test": "SET NODE_ENV=test&& jest",
+    "test:update": "SET NODE_ENV=test&& jest -u",
+    "test:coverage": "SET NODE_ENV=test&& jest --coverage"
   },
   "dependencies": {
     "axios": "0.16.1",
@@ -13,6 +18,7 @@
     "babel-register": "6.24.1",
     "compression": "1.6.2",
     "cors": "2.8.3",
+    "enzyme-adapter-react-16": "^1.7.0",
     "express": "4.15.3",
     "lodash": "4.17.4",
     "preact": "8.1.0",
