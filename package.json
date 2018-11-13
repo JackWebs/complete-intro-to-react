@@ -3,7 +3,8 @@
     "api": "node ratingsAPI.js",
     "build": "webpack",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "test": "SET NODE_ENV=test jest"
   },
   "dependencies": {
     "axios": "0.16.1",
@@ -52,7 +53,7 @@
     "eslint-plugin-prettier": "2.1.1",
     "eslint-plugin-react": "7.0.1",
     "flow-bin": "0.47.0",
-    "jest": "20.0.4",
+    "jest": "^23.6.0",
     "jest-serializer-enzyme": "1.0.0",
     "moxios": "0.4.0",
     "nodemon": "1.11.0",
